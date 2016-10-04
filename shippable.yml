@@ -22,8 +22,8 @@ build:
    # - docker build -t=shippabledocker/samplenode:$BRANCH.$BUILD_NUMBER .
 
   pre_ci_boot:
-      image_name: shippabledocker/samplenode
-      image_tag: latest
+      image_name: shippabledocker/pipelinev2
+      image_tag: deploy.1
       pull: false
       options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
