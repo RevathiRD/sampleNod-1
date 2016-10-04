@@ -2,20 +2,40 @@ language: node_js
 
 # Version number
 node_js:
-  - "0.10"
-  - "0.12"
- 
-matrix:
-  include:
-    - node_js: "0.11"
-  exclude:
-    - node_js: "0.10"
-    
+  #- 0.10
+  #- 0.12
+  #- 4.2.3
+  - iojs-v1
+  #- iojs-v2
+  #- iojs-v3
+  #- 5.0
+
+env:
+  global:
+    - FOO=FUBU   
+
+  matrix:
+    - M1=ONE
+
 build:
-  ci:
-    - node --version
-    
+  pre_ci:
+    - docker build -t=shippabledocker/samplenode:$BRANCH.$BUILD_NUMBER .
+
   pre_ci_boot:
-    image_name: drydock/u12nod
-    image_tag: prod
-    pull: true  
+      image_name: shippabledocker/samplenode
+      image_tag: latest
+      pull: false
+      options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
+
+  ci:
+    - node --version  
+    - ps -eax
+    - ls -al 
+
+  post_ci:
+    - docker push shippabledocker/samplenode:$BRANCH.$BUILD_NUMBER
+
+integrations:
+  hub:
+    - integrationName: ship-docker
+      type: docker 
