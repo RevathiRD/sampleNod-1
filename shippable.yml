@@ -19,7 +19,7 @@ env:
 
 build:
   pre_ci:
-    - docker build -t=shippabledocker/samplenode:$BRANCH.$BUILD_NUMBER .
+    - docker build -t=shippabledocker/samplenodercimg:$BRANCH.$BUILD_NUMBER .
 
   pre_ci_boot:
       image_name: shippabledocker/samplenode
@@ -33,9 +33,9 @@ build:
     - ls -al 
 
   post_ci:
-    - docker push shippabledocker/samplenode:$BRANCH.$BUILD_NUMBER
+    - docker push shippabledocker/samplenodercimg:$BRANCH.$BUILD_NUMBER
 
 integrations:
   hub:
-    - integrationName: ship-docker
+    - integrationName: ship-docker-1
       type: docker 
