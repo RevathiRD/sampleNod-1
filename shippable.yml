@@ -22,8 +22,8 @@ build:
  #   - docker build -t=shippabledocker/shiphitchcock1_sample_nod .
 
   pre_ci_boot:
-    image_name: shippabledocker/shiphitchcock1_sample_nod
-    image_tag: latest
+    image_name: shippabledocker/samplenodercimg
+    image_tag: docker-preci.23
     pull: true
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
@@ -33,10 +33,10 @@ build:
    # - ls -al 
 
   post_ci:
-    - docker build -t=shippabledocker/cock1samplenode4oct .
-    - docker push shippabledocker/cock1samplenode4oct
+    - docker build -t=shippabledocker/cock1samplenode4oct:new .
+    - docker push shippabledocker/cock1samplenode4oct:new
 
 integrations:
   hub:
-    - integrationName: ship-docker
+    - integrationName: ship-docker-1
       type: docker
