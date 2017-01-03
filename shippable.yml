@@ -22,7 +22,7 @@ build:
     - docker build -t=shippabledocker/samplenodercimg:$BRANCH.$BUILD_NUMBER .
 
   pre_ci_boot:
-      image_name: shippabledocker/samplenode
+      image_name: shippabledocker/samplenodercimg
       image_tag: $BRANCH.$BUILD_NUMBER
       pull: false
       options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
