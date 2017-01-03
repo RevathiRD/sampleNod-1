@@ -33,8 +33,8 @@ build:
    # - ls -al 
 
   post_ci:
-    - docker build -t=shippabledocker/cock1samplenode4oct:new .
-    - docker push shippabledocker/cock1samplenode4oct:new
+    - docker build -t=shippabledocker/rcimgrunsh .
+    - docker push shippabledocker/rcimgrunsh
 
 integrations:
   hub:
