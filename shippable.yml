@@ -34,8 +34,9 @@ build:
     - ps -eax
     - ls -al 
 
- # post_ci:
-  #  - docker push shippabledocker/samplenodercimg:$BRANCH.$BUILD_NUMBER
+  post_ci:
+    - docker build -t=shippabledocker/samplenodercimg:$BRANCH.$BUILD_NUMBER .
+    - docker push shippabledocker/samplenodercimg:$BRANCH.$BUILD_NUMBER
 
 integrations:
   hub:
