@@ -1,35 +1,46 @@
-# Language setting
 language: node_js
 
 # Version number
 node_js:
-  - 0.12
-  - 0.11
-env:
-  - test=rcyml
-build:
-  pre_ci_boot:
-    image_name: drydock/u14nod
-    image_tag: prod
-    pull: true
-    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
+  #- 0.10
+  #- 0.12
+  #- 4.2.3
+  - iojs-v1
+  #- iojs-v2
+  #- iojs-v3
+  #- 5.0
 
+env:
+  global:
+    - FOO=FUBU   
+
+  matrix:
+    - M1=ONE
+
+build:
   pre_ci:
-    - echo "this is master branch"
+   #  - docker pull shippabledocker/sample_node_pvt
+    -  docker pull shippabledocker/shiphitchcock1_sample_nod111
+  #  - docker build -t=shippabledocker/samplenodercimg:$BRANCH.$BUILD_NUMBER .
+
+ # pre_ci_boot:
+  #    image_name: shippabledocker/hitchcock4_sample_node21
+   #   image_tag: latest
+    #  pull: true
+     # options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   ci:
-    - npm install
-    - echo $test
-    #- sleep 9m
+    - node --version  
+    - ps -eax
+    - ls -al 
 
-  post_ci:
-    - ls -a
-    - pwd
+  #post_ci:
+  #  - docker push shippabledocker/samplenodercimg:$BRANCH.$BUILD_NUMBER
 
-#  cache: true
-
- # cache_dir_list: 
-  #  - $SHIPPABLE_BUILD_DIR/node_modules
+integrations:
+  hub:
+    - integrationName: ship-docker-1
+      type: docker 
 
 
 
