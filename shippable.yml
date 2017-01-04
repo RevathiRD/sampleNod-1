@@ -22,7 +22,7 @@ build:
   #  - docker build -t=shippabledocker/samplenodercimg:$BRANCH.$BUILD_NUMBER .
 
   pre_ci_boot:
-      image_name: shippabledocker/hitchcock3_sample_node_xyz
+      image_name: shippabledocker/hitchcock4_sample_node21
       image_tag: latest
       pull: true
       options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
