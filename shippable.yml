@@ -23,7 +23,7 @@ build:
  #   - docker build -t=shippabledocker/shiphitchcock1_sample_nod .
 
   pre_ci_boot:
-    image_name: quay.io/revathird/testnodeimg
+    image_name: quay.io/revathird/hitchcock3_sample_java 
     image_tag: latest
     pull: true
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
