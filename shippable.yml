@@ -23,7 +23,7 @@ build:
 
   pre_ci_boot:
       image_name: shippabledocker/samplenodercimg
-      image_tag: $BRANCH.$BUILD_NUMBER
+      image_tag: docker-preci.23
       pull: true
       options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
