@@ -20,7 +20,7 @@ env:
 build:
   pre_ci:
    #  - docker pull shippabledocker/sample_node_pvt
-    - docker pull shippabledocker/hitchcock4_sample_node21
+    -  docker pull shippabledocker/shiphitchcock1_sample_nod111
   #  - docker build -t=shippabledocker/samplenodercimg:$BRANCH.$BUILD_NUMBER .
 
  # pre_ci_boot:
