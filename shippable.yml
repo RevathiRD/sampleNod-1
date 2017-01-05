@@ -41,7 +41,7 @@ build:
     #- docker push shippabledocker/samplenodercimg:docker2
 branches:
   except: 
-    - master
+    - @#$&*()master
 integrations:
   hub:
     - integrationName: ship-docker-1
