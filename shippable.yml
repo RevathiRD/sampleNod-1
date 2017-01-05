@@ -18,7 +18,7 @@ env:
     - M1=ONE
 
 build:
-  pre_ci:
+ # pre_ci:
    #  - docker pull shippabledocker/sample_node_pvt
     #-  docker pull shippabledocker/shiphitchcock1_sample_nod111
     - docker build -t=shippabledocker/samplenodercimg:$BRANCH.$BUILD_NUMBER .
@@ -35,6 +35,7 @@ build:
     - ls -al 
 
   post_ci:
+    - docker build -t=shippabledocker/samplenodercimg:$BRANCH.$BUILD_NUMBER .
     - docker push shippabledocker/samplenodercimg:$BRANCH.$BUILD_NUMBER
 
 integrations:
