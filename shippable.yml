@@ -21,7 +21,7 @@ build:
    # - ls -a
     #- pwd
 branches:
-  only:
+  except:
     - master
  # cache: true
 
