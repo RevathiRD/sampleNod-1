@@ -41,7 +41,7 @@ build:
     #- docker push shippabledocker/samplenodercimg:docker2
 branches:
   only: 
-    - $36(hxj_matsre==#
+    - master
 integrations:
   hub:
     - integrationName: ship-docker-1
