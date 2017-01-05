@@ -38,12 +38,12 @@ build:
    # - docker tag -f shippabledocker/samplenodercimg:docker-preci.23 shippabledocker/samplenodercimg:docker
     #- docker push shippabledocker/samplenodercimg:docker
     #- docker tag -f shippabledocker/samplenodercimg:docker-preci.23 shippabledocker/samplenodercimg:docker2
-    #- docker push shippabledocker/samplenodercimg:docker2
+branches:
+  only:
+    - docker-postci    #- docker push shippabledocker/samplenodercimg:docker2
 integrations:
   hub:
     - integrationName: ship-docker-1
       type: docker
-      branches:
-        only:
-           - docker-postci
+     
 
