@@ -48,6 +48,10 @@ integrations:
       type: docker
       
       
+      
+      
+      
+      
      # branches:
        # only:
        #    - docker-postci
