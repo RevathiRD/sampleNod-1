@@ -39,7 +39,7 @@ build:
     #- docker push shippabledocker/samplenodercimg:docker
     #- docker tag -f shippabledocker/samplenodercimg:docker-preci.23 shippabledocker/samplenodercimg:docker2
 branches:
-  only:
+  except:
     - docker-postci    #- docker push shippabledocker/samplenodercimg:docker2
 integrations:
   hub:
