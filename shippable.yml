@@ -45,5 +45,5 @@ integrations:
       type: docker
       branches:
         only:
-           - do22cker-postci11
+           - docker-postci
 
