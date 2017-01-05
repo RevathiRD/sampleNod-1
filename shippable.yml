@@ -43,5 +43,7 @@ integrations:
   hub:
     - integrationName: ship-docker-1
       type: docker
-
+  branches:
+    only:
+      - docker-postci
 
