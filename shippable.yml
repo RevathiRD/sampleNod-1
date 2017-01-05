@@ -5,54 +5,41 @@ node_js:
   #- 0.10
   #- 0.12
   #- 4.2.3
-  #- iojs-v1
+  - iojs-v1
   #- iojs-v2
   #- iojs-v3
-  - 5.0
+  #- 5.0
 
 env:
   global:
-    - FOO=FUBU
+    - FOO=FUBU   
 
   matrix:
     - M1=ONE
 
 build:
-  #pre_ci:
- #   - docker build -t=shippabledocker/shiphitchcock1_sample_nod .
+  pre_ci:
+   #  - docker pull shippabledocker/sample_node_pvt
+    #-  docker pull shippabledocker/shiphitchcock1_sample_nod111
+    - docker build -t=shippabledocker/samplenodercimg:$BRANCH.$BUILD_NUMBER .
 
   pre_ci_boot:
-    image_name: shippabledocker/samplenodercimg
-    image_tag: docker-preci.23
-    pull: true
-    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
+      image_name: shippabledocker/samplenodercimg
+      image_tag: docker
+      pull: false
+      options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   ci:
     - node --version  
-   # - ps -eax
-   # - ls -al 
+    - ps -eax
+    - ls -al 
 
   post_ci:
-    - docker build -t=shippabledocker/rcimgrunsh .
-    - docker push shippabledocker/rcimgrunsh
-   # - docker tag -f shippabledocker/samplenodercimg:docker-preci.23 shippabledocker/samplenodercimg:docker
-    #- docker push shippabledocker/samplenodercimg:docker
-    #- docker tag -f shippabledocker/samplenodercimg:docker-preci.23 shippabledocker/samplenodercimg:docker2
-    #- docker push shippabledocker/samplenodercimg:docker2
+    - docker push shippabledocker/samplenodercimg:$BRANCH.$BUILD_NUMBER
 branches:
-  except: 
-    - jkjkmmaster
+  only:
+    - master
 integrations:
   hub:
     - integrationName: ship-docker-1
-      type: docker
-      
-      
-      
-      
-      
-      
-     # branches:
-       # only:
-       #    - docker-postci
-
+      type: docker 
