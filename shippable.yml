@@ -43,3 +43,5 @@ integrations:
   hub:
     - integrationName: ship-docker-1
       type: docker 
+      
+      
