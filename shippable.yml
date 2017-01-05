@@ -22,7 +22,7 @@ build:
     #- pwd
 branches:
   only:
-    - m1234567aster
+    - ()*&^%$#
  # cache: true
 
   #cache_dir_list: 
