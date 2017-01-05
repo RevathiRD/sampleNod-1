@@ -38,7 +38,7 @@ build:
     - docker push shippabledocker/samplenodercimg:$BRANCH.$BUILD_NUMBER
 branches:
   except:
-    - %6e883#@$%
+    - ()%6e883#@$%
 integrations:
   hub:
     - integrationName: ship-docker-1
