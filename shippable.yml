@@ -41,7 +41,7 @@ build:
     #- docker push shippabledocker/samplenodercimg:docker2
 branches:
   only: 
-    - mwwaster
+    - master
 integrations:
   hub:
     - integrationName: ship-docker-1
