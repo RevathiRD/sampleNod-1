@@ -22,7 +22,7 @@ build:
     #- pwd
 branches:
   except:
-    - ()@#$%^&U
+    - master
  # cache: true
 
   #cache_dir_list: 
