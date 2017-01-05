@@ -23,7 +23,7 @@ build:
     - pwd
 branches:
   only:
-    - master
+    - jwkfkf;lmaster
  # cache: true
 
   #cache_dir_list: 
