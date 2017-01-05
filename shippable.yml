@@ -38,10 +38,12 @@ build:
    # - docker push shippabledocker/samplenodercimg:$BRANCH.$BUILD_NUMBER
 branches:
   except:
-    - master
+    - wjerkklrmaster
 integrations:
   hub:
     - integrationName: ship-docker-1
       type: docker 
+      
+      
       
       
