@@ -22,11 +22,11 @@ build:
    #  - docker build -t=gcr.io/vidya-project/node1-img:$BRANCH.$BUILD_NUMBER  .
  #   - docker build -t=shippabledocker/shiphitchcock1_sample_nod .
 
-#  pre_ci_boot:
- #   image_name: gcr.io/vidya-project/node1-img
-  #  image_tag: latest
-   # pull: true
-    #options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
+  pre_ci_boot:
+    image_name: gcr.io/vidya-project/node1-img
+    image_tag: latest
+    pull: true
+    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   ci:
     - node --version  
