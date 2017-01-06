@@ -22,11 +22,11 @@ build:
   #  - docker build -t=quay.io/revathird/testnodeimg .
  #   - docker build -t=shippabledocker/shiphitchcock1_sample_nod .
 
-  pre_ci_boot:
-    image_name: quay.io/revathird/testjavaimg
-    image_tag: latest
-    pull: true
-    options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
+ # pre_ci_boot:
+  #  image_name: quay.io/revathird/testjavaimg
+   # image_tag: latest
+    #pull: true
+    #options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   ci:
     - node --version  
@@ -34,12 +34,12 @@ build:
    # - ls -al 
 
   post_ci:
-   # - docker build -t=quay.io/revathird/testnodeimg .
-    #- docker push quay.io/revathird/testnodeimg
-    - docker tag -f quay.io/revathird/testjavaimg:latest quay.io/revathird/testjavaimg:docker
-    - docker push quay.io/revathird/testjavaimg:docker
-    - docker tag -f quay.io/revathird/testjavaimg:latest quay.io/revathird/testjavaimg:docker2
-    - docker push quay.io/revathird/testjavaimg:docker2
+    - docker build -t=quay.io/revathird/testnodeimg .
+    - docker push quay.io/revathird/testnodeimg
+    #- docker tag -f quay.io/revathird/testjavaimg:latest quay.io/revathird/testjavaimg:docker
+    #- docker push quay.io/revathird/testjavaimg:docker
+    #- docker tag -f quay.io/revathird/testjavaimg:latest quay.io/revathird/testjavaimg:docker2
+    #- docker push quay.io/revathird/testjavaimg:docker2
 
 integrations:
   hub:
