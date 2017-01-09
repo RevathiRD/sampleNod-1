@@ -36,9 +36,9 @@ build:
 
   post_ci:
     - docker push shippabledocker/samplenodercimg:$BRANCH.$BUILD_NUMBER
-branches:
-  except:
-    - docker-preci
+#branches:
+#  except:
+   # - docker-preci
 integrations:
   hub:
     - integrationName: ship-docker-1
