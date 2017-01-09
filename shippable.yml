@@ -47,7 +47,7 @@ integrations:
           on_pull_request: always
           
        
-        - integrationName: ship-hipchat-room-user
+        - integrationName: ship-hipchat-1
           type: hipchat
           recipients:
             - '#Private-room'
