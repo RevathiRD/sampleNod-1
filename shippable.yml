@@ -25,10 +25,10 @@ build:
 matrix:
   allow_failures:
     - node_js: "0.11"
- # exclude: 
-  #  - node_js: "0.12"
-   #   env: 
-     #   - M1=ONE
+  exclude: 
+    - node_js: "0.12"
+      env: 
+        - M1=ONE
   #post_ci:
    # - ls -a
     #- pwd
