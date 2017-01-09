@@ -30,6 +30,7 @@ build:
 
   ci:
     - node --version  
+    - echp $foo
    # - ps -eax
    # - ls -al 
 
