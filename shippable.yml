@@ -17,7 +17,10 @@ build:
 
   ci:
     - npm install
-
+    - - if [ "$SHIPPABLE_NODE_VERSION" == "0.11" ]; then foobar; fi [NODE_JS]
+matrix:
+  allow_failures:
+    - node_js: "0.11"
   #post_ci:
    # - ls -a
     #- pwd
