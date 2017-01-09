@@ -25,8 +25,8 @@ build:
 matrix:
   allow_failures:
     - node_js: "0.11"
-      env:
-        - M1=!@#$%^&*()
+      #env:
+       # - M1=!@#$%^&*()
   include: 
     - node_js: "0.12"
       env: 
