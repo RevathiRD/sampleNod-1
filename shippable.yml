@@ -32,7 +32,7 @@ integrations:
           recipients:
             - shiptest.rc.ow@gmail.com
             - revathi@shippable.com
-          #on_start: never
+          on_start: always
           on_success: always
           on_failure: always
           on_pull_request: always
@@ -41,7 +41,7 @@ integrations:
           type: slack
           recipients:
             - "#random"
-          #on_start: never
+          on_start: always
           on_success: always
           on_failure: always
           on_pull_request: always
