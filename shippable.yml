@@ -28,7 +28,7 @@ matrix:
   exclude: 
     - node_js: "0.12"
       env: 
-        - M1=ONE
+        - M1:ONE
   #post_ci:
    # - ls -a
     #- pwd
