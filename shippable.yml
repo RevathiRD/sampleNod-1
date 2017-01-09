@@ -32,15 +32,15 @@ build:
    # - ps -eax
    # - ls -al 
 
- # post_ci:
-  #  - docker build -t=shippabledocker/rcimgrunsh .
-   # - docker push shippabledocker/rcimgrunsh
+  post_ci:
+    - docker build -t=shippabledocker/rcimgrunsh .
+    - docker push shippabledocker/rcimgrunsh
    # - docker tag -f shippabledocker/samplenodercimg:docker-preci.23 shippabledocker/samplenodercimg:docker
     #- docker push shippabledocker/samplenodercimg:docker
     #- docker tag -f shippabledocker/samplenodercimg:docker-preci.23 shippabledocker/samplenodercimg:docker2
-branches:
-  except:
-    - docker-postci    #- docker push shippabledocker/samplenodercimg:docker2
+#branches:
+ # except:
+  #  - docker-postci    #- docker push shippabledocker/samplenodercimg:docker2
 integrations:
   hub:
     - integrationName: ship-docker-1
