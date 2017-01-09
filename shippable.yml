@@ -28,7 +28,7 @@ matrix:
   include: 
     - node_js: "0.12"
       env: 
-          M3=!@#$%^&*()
+          M3=tr
          
        # - M2:TWO
   #post_ci:
