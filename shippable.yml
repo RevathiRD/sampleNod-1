@@ -26,7 +26,7 @@ matrix:
   allow_failures:
     - node_js: "0.11"
       env:
-        - M1=ONE
+        - M1:ONE
   include: 
     - node_js: "0.12"
       env: 
