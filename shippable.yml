@@ -1,13 +1,6 @@
 # Language setting
 language: node_js
-services:
-  - mysql
-  - postgres
-  - redis
-  - memcache
-  - elasticsearch
-  - mongodb
-  - rabbitmq
+
 # Version number
 node_js:
   - 0.12
@@ -31,6 +24,39 @@ build:
 branches:
   only:
     - master
+integrations:
+  
+  notifications:
+        - integrationName: email
+          type: email
+          recipients:
+            - shiptest.rc.ow@gmail.com
+            - revathi@shippable.com
+          #on_start: never
+          on_success: always
+          on_failure: always
+          on_pull_request: always
+          
+        - integrationName: ship-slack-1
+          type: slack
+          recipients:
+            - "#random"
+          #on_start: never
+          on_success: always
+          on_failure: always
+          on_pull_request: always
+          
+       
+       # - integrationName: ship-hipchat-room-user
+        #  type: hipchat
+        #  recipients:
+         #   - '#Private-room'
+           # - '@shiphitchcock3'
+         # on_start: never
+         # on_success: always
+         # on_failure: always
+         # on_pull_request: always
+      
  # cache: true
 
   #cache_dir_list: 
