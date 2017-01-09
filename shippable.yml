@@ -13,7 +13,8 @@ node_js:
 env:
   global:
     - FOO=FUBU
-    - secure: e1R9iCnOp552uA+R9sD1YmS39BRbLSsAuRECBeziM9oAIxm/unzDIMYVS84XSUhSReEu8xwYbl/Dm0xdBC2AwM//7c4XBSI4fdh8DUFzvALzhAdVzLowKs6IbfBHwL0r87NHt3LgBjQDNaHpDfahmYijRpatx5a9GE4rq9jcMycxwinEkrYldBgQs7bjbdnZ/Y0WUUiSKuK5ouggwYToqeSes+zsKu86c+F+Cddcv23GH9Ufv0XcIDwRIKcigT6HmQ2/+a6v5azxyjg1SvtGojyX+ljYanH66FcEnTkhfKDiSJ7yX/Bx7WAwTqx3q6JSd/n3pcbpOwKtbNR3kUyGnQ==
+    - secure: VFN06EBkPKRKVduL1IlsN14NQUTCKWfRnet6Q4QNf51qb8wZbB/jHfKl8P0aBwAqcyBRpgPcEohcbPT0vSSSA0KJAHSkQP6C3YfXr9mG+YsbhaledxdJmiz6IBK5p2+z4hRjZdcoANkjjjhkOk/Go3a0le6QMIOijESLkAmqsOwXZZ1SFlg4FTtUzhK1a/1xKMraPK+5ZKtpsN4VQDmJ+IH+/G4tkYdJACYYdNDLpK+N7Lett0IdEXoA7Mm0bv6xfQkWZqQCHxVCIKFmtEuTXa2ueK5LV4Oub72mfKNhu2fOWXTO6Eyb3PkHrOrDYvH3CQE9WzCKzhb1RD57DbQNMA==
+  #  - secure: e1R9iCnOp552uA+R9sD1YmS39BRbLSsAuRECBeziM9oAIxm/unzDIMYVS84XSUhSReEu8xwYbl/Dm0xdBC2AwM//7c4XBSI4fdh8DUFzvALzhAdVzLowKs6IbfBHwL0r87NHt3LgBjQDNaHpDfahmYijRpatx5a9GE4rq9jcMycxwinEkrYldBgQs7bjbdnZ/Y0WUUiSKuK5ouggwYToqeSes+zsKu86c+F+Cddcv23GH9Ufv0XcIDwRIKcigT6HmQ2/+a6v5azxyjg1SvtGojyX+ljYanH66FcEnTkhfKDiSJ7yX/Bx7WAwTqx3q6JSd/n3pcbpOwKtbNR3kUyGnQ==
    # - secure: ba9LTMTKknlWqXrzFiRdm/+PnL8gX0fcsBcN54OksGFpDu8itVRYhqrobjsti4tu550EV8plfvlZfx8yHFIa7hwwqEG0GyIphjSBs9aVf+2icsVZmhT7gjIvG7b8TfAimIdMKoJtvuxsMPT49AYt9PpLX6tfV+tZsPgPjUnSEfjm/nMS0VHH0isFtCjGt26eEfdJBMgbi5nLa6a+DIUemPGBQAYStnXLyZSNvn1B4Jh8ueB6bH0W/2YRl3sATSIhjpnrMptQ4lHX2WPYDqdNzpMvJMPr5DMbUcVe1cfXtHYwRAVcGF4FSjVOYmHroYG963mwf76u+KDlJwzn7PwVpg==
   matrix:
     - M1=ONE
@@ -31,7 +32,8 @@ build:
   ci:
     - node --version  
     - echo $test
-    - echo $tes
+    - echo $A
+    - ech0 $C
    # - ps -eax
    # - ls -al 
 
