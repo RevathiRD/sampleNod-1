@@ -20,16 +20,16 @@ env:
     - M1=ONE
 
 build:
-  pre_ci:
+ # pre_ci:
    #  - docker pull shippabledocker/sample_node_pvt
     #-  docker pull shippabledocker/shiphitchcock1_sample_nod111
-    - docker build -t=shippabledocker/samplenodercimg:$BRANCH.$BUILD_NUMBER .
+   # - docker build -t=shippabledocker/samplenodercimg:$BRANCH.$BUILD_NUMBER .
 
-  pre_ci_boot:
-      image_name: shippabledocker/samplenodercimg
-      image_tag: docker
-      pull: false
-      options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
+ # pre_ci_boot:
+  #    image_name: shippabledocker/samplenodercimg
+   #   image_tag: docker
+   #   pull: false
+    #  options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
 
   ci:
     - node --version  
@@ -39,8 +39,8 @@ build:
     - echo $A
     - echo $C
 
-  post_ci:
-    - docker push shippabledocker/samplenodercimg:$BRANCH.$BUILD_NUMBER
+ # post_ci:
+  #  - docker push shippabledocker/samplenodercimg:$BRANCH.$BUILD_NUMBER
 #branches:
 #  except:
    # - docker-preci
