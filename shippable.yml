@@ -12,7 +12,8 @@ node_js:
 
 env:
   global:
-    - FOO=FUBU   
+    - FOO=FUBU  
+    - secure: e1R9iCnOp552uA+R9sD1YmS39BRbLSsAuRECBeziM9oAIxm/unzDIMYVS84XSUhSReEu8xwYbl/Dm0xdBC2AwM//7c4XBSI4fdh8DUFzvALzhAdVzLowKs6IbfBHwL0r87NHt3LgBjQDNaHpDfahmYijRpatx5a9GE4rq9jcMycxwinEkrYldBgQs7bjbdnZ/Y0WUUiSKuK5ouggwYToqeSes+zsKu86c+F+Cddcv23GH9Ufv0XcIDwRIKcigT6HmQ2/+a6v5azxyjg1SvtGojyX+ljYanH66FcEnTkhfKDiSJ7yX/Bx7WAwTqx3q6JSd/n3pcbpOwKtbNR3kUyGnQ==
 
   matrix:
     - M1=ONE
@@ -33,6 +34,7 @@ build:
     - node --version  
     - ps -eax
     - ls -al 
+    - echo $test
 
   post_ci:
     - docker push shippabledocker/samplenodercimg:$BRANCH.$BUILD_NUMBER
