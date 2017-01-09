@@ -29,6 +29,7 @@ matrix:
     - node_js: "0.12"
       env: 
         M1=ONE
+        M2=TWO
   #post_ci:
    # - ls -a
     #- pwd
