@@ -8,7 +8,7 @@ node_js:
   - 5.0
 env:
   matrix:
-    - M1=ONE
+    - M1:ONE
     - M2=TWO
 build:
  # pre_ci_boot:
@@ -25,10 +25,10 @@ build:
 matrix:
   allow_failures:
     - node_js: "0.11"
-  exclude: 
-    - node_js: "0.12"
-      env: 
-        - M1=+_)(*&^%$#
+ # exclude: 
+   # - node_js: "0.12"
+   #   env: 
+       # - M1=ONE
   #post_ci:
    # - ls -a
     #- pwd
