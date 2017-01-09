@@ -25,10 +25,12 @@ build:
 matrix:
   allow_failures:
     - node_js: "0.11"
+      env:
+        - M1=one
   include: 
     - node_js: "0.12"
       env: 
-          M3=tr
+        - M3=three
          
        # - M2:TWO
   #post_ci:
