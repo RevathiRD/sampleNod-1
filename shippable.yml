@@ -33,7 +33,7 @@ build:
     - node --version  
     - echo $test
     - echo $A
-    - ech0 $C
+    - echo $C
    # - ps -eax
    # - ls -al 
 
