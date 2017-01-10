@@ -3,6 +3,7 @@ jobs:
     type: runSh
     steps:
       - IN: sample-script
+      - IN: tg1
       - TASK:
         - script: ./IN/sample-script/gitRepo/echo.sh
         - echo 'testrunShscriptout'
