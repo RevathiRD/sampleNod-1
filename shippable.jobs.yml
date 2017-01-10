@@ -1,0 +1,12 @@
+- name: runsh
+    type: runSh
+    steps:
+      - IN: sample-script
+      - TASK:
+        - script: ./IN/sample-script/gitRepo/echo.sh
+        - echo 'testrunShscriptout'
+        - ls
+    on_success:
+      - NOTIFY: myEmailS1
+      - NOTIFY: mySlackS1
+      
