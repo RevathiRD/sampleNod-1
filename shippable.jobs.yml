@@ -1,4 +1,5 @@
-- name: runsh
+jobs:
+  - name: runsh
     type: runSh
     steps:
       - IN: sample-script
