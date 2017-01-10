@@ -10,6 +10,7 @@ jobs:
       - IN: sample-script
       - IN: tg1
       - IN: manifest1
+      - IN: image2
       - TASK:
         - script: ./IN/sample-script/gitRepo/echo.sh
         #- echo 'testrunShscriptout'
