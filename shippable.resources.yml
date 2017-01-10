@@ -36,3 +36,7 @@ resources:
       method: email
       recipients: 
         - "revathi@shippable.com"
+  - name: version-resource
+    type: version
+    seed:
+      versionName: "0.0.1-beta"
