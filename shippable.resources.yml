@@ -1,0 +1,31 @@
+resources:
+  - name: image1
+    type: image
+    integration: ship-docker-1	
+    pointer:
+      sourceName: "shippabledocker/pipelinev2"
+    seed:
+      versionName: "deploy.1"
+ 
+  - name: sample-script
+    type: gitRepo
+    integration: "github"
+    pointer:
+      sourceName: "shiptest-rc-ow/sample-script-3"
+      branch: "master"
+
+  - name: mySlackS1
+    type: notification
+    integration: "ship-slack-1"
+    pointer:
+      recipients:
+       # - theyare
+        - "#random"
+       # - "#pipeline-public"
+       
+  - name: myEmailS1
+    type: notification
+    pointer:
+      method: email
+      recipients: 
+        - "revathi@shippable.com"
