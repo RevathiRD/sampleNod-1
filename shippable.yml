@@ -50,7 +50,7 @@ integrations:
   hub:
     - integrationName: ship-docker-1
       type: docker
-    - integrationName: ship-rev
-      type: docker
+   # - integrationName: ship-rev
+    #  type: docker
      
 
