@@ -22,7 +22,7 @@ build:
   ci:
     - npm install
     - if [ "$SHIPPABLE_NODE_VERSION" == "0.11" ]; then foobar; fi ;
-   # - sleep 15m
+    - sleep 9m
 matrix:
   allow_failures:
     - node_js: "0.11"
