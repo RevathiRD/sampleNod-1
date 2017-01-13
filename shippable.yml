@@ -39,9 +39,9 @@ matrix:
   #post_ci:
    # - ls -a
     #- pwd
-branches:
-  only:
-    - master
+#branches:
+ # only:
+  #  - master
 integrations:
   
   notifications:
