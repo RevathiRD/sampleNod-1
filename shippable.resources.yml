@@ -20,7 +20,30 @@ resources:
       sourceName: "shippabledocker/pipelinev2"
     seed:
       versionName: "deploy.1"
- 
+      
+  - name: image4
+    type: image
+    integration: ship-docker-1	
+    pointer:
+      sourceName: "shippabledocker/pipelinev2"
+    seed:
+      versionName: "deploy.1"
+  - name: image5
+    type: image
+    integration: ship-docker-1	
+    pointer:
+      sourceName: "shippabledocker/pipelinev2"
+    seed:
+      versionName: "deploy.1"
+      
+      
+  - name: image6
+    type: image
+    integration: ship-docker-1	
+    pointer:
+      sourceName: "shippabledocker/pipelinev2"
+    seed:
+      versionName: "deploy.1"
   - name: sample-script
     type: gitRepo
     integration: "github"
