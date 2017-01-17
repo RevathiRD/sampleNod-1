@@ -4,7 +4,8 @@ jobs:
     type: manifest
     steps:
       - IN: image1
-    flags: manifest
+    flags: 
+      - manifest
   - name: runsh
     type: runSh
     steps:
