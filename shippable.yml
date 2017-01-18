@@ -34,8 +34,8 @@ build:
    # - ls -al 
 
   post_ci:
-    - docker build -t=quay.io/revathird/testnodeimg .
-    - docker push quay.io/revathird/testnodeimg
+    - docker build -t=quay.io/revathird/testnodeimg123 .
+    - docker push quay.io/revathird/testnodeimg123
     #- docker tag -f quay.io/revathird/testjavaimg:latest quay.io/revathird/testjavaimg:docker
     #- docker push quay.io/revathird/testjavaimg:docker
     #- docker tag -f quay.io/revathird/testjavaimg:latest quay.io/revathird/testjavaimg:docker2
