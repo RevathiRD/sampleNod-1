@@ -76,14 +76,14 @@ integrations:
           on_success: always
           #on_failure: always
           #on_pull_request: always
-        - integrationName: test-projecttrigger
-          type: webhook
-          payload:
-            - test=foo
-          on_start: always
-          on_success: always
-          on_failure: always
-          on_pull_request: always
+        #- integrationName: test-projecttrigger
+         # type: webhook
+         # payload:
+           # - test=foo
+         # on_start: always
+         # on_success: always
+         # on_failure: always
+         # on_pull_request: always
         - integrationName: test-generictrigger
           type: webhook
           payload:
