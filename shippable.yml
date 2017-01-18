@@ -76,22 +76,22 @@ integrations:
           on_success: always
           #on_failure: always
           #on_pull_request: always
-        #- integrationName: test-projecttrigger
-         # type: webhook
-         # payload:
-           # - test=foo
-         # on_start: always
-         # on_success: always
-         # on_failure: always
-         # on_pull_request: always
+        - integrationName: test-projecttrigger
+          type: webhook
+          payload:
+            - test=foo
+          on_start: never
+          on_success: change
+          on_failure: change
+          on_pull_request: always
         - integrationName: test-generictrigger
           type: webhook
           payload:
             - title=Failure - $REPO_FULL_NAME - $BUILD_NUMBER
             - body=Shippable Run $BUILD_NUMBER ($BUILD_URL) failed for $COMPARE_URL
-          on_start: always
-          on_success: always
-          on_failure: always
+          on_start: never
+          on_success: change
+          on_failure: change
           on_pull_request: always
           
           
