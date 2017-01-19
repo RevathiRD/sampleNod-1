@@ -93,7 +93,15 @@ integrations:
           on_success: always
           on_failure: change
           on_pull_request: always
-          
+        - integrationName: test-img
+          type: webhook
+          payload:
+            - versionName=ShippableRun-$BUILD_NUMBER
+            
+          on_start: never
+          on_success: always
+          on_failure: always
+          on_pull_request: always
           
           
  # cache: true
