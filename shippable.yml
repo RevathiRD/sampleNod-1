@@ -25,15 +25,15 @@ build:
    # - if [ "$SHIPPABLE_NODE_VERSION" == "0.11" ]; then foobar; fi ;
     - echo $test
     #- sleep 9m
-matrix:
+#matrix:
  # allow_failures:
   #  - node_js: "0.11"
       #env:
        # - M1=!@#$%^&*()
-  include: 
-    - node_js: "0.12"
-      env: 
-        - M3=three
+ # include: 
+  #  - node_js: "0.12"
+   #   env: 
+    #    - M3=three
         
       
          
