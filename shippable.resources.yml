@@ -68,6 +68,8 @@ resources:
         - "revathi@shippable.com"
         - "shiptest.rc.ow@gmail.com"
   #- name: version-resource
+  
+  
    # type: version
     #seed:
      # versionName: "0.0.1-beta"
