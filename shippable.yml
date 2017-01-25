@@ -3,7 +3,7 @@ language: node_js
 
 # Version number
 node_js:
- # - 0.12
+  - 0.12
   - 0.11
  # - 5.0
 #env:
@@ -111,6 +111,8 @@ integrations:
 
   #cache_dir_list: 
     #- $SHIPPABLE_BUILD_DIR/node_modules
+
+
 
 
 
