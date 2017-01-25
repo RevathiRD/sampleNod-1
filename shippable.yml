@@ -58,7 +58,7 @@ integrations:
           on_start: always
           on_success: always
           #on_failure: always
-          #on_pull_request: always
+          on_pull_request: always
           
         - integrationName: ship-slack-1
           type: slack
