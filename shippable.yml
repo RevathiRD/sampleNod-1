@@ -22,7 +22,7 @@ build:
 
   ci:
     - npm install
-    - if [ "$SHIPPABLE_NODE_VERSION" == "0.11" ]; then foobar; fi ;
+   # - if [ "$SHIPPABLE_NODE_VERSION" == "0.11" ]; then foobar; fi ;
     - echo $test
     #- sleep 9m
 #matrix:
@@ -58,7 +58,7 @@ integrations:
           on_start: always
           on_success: always
           #on_failure: always
-          #on_pull_request: always
+          on_pull_request: always
           
         - integrationName: ship-slack-1
           type: slack
@@ -111,6 +111,8 @@ integrations:
 
   #cache_dir_list: 
     #- $SHIPPABLE_BUILD_DIR/node_modules
+
+
 
 
 
